@@ -1,3 +1,7 @@
+close all
+clear all
+clc
+
 %% count number of points covered in a UWB placement
 % specify size of work space [x,y] in meters
 ws = [120 90];
@@ -128,7 +132,10 @@ xlabel('X (m)'); ylabel('Y (m)');
 title('UWB sensor coverage')
 c.Label.String = 'number of sensors covering the point';
 hold on
-quiver3(prime_c(:,1),prime_c(:,2),repmat(2.6,size(prime_c,1),1),cos(prime_c(:,3)),sin(prime_c(:,3)),zeros(size(prime_c,1),1),0.5,'LineWidth',1,'DisplayName','Prime13')
+q = quiver3(prime_c(:,1),prime_c(:,2),repmat(2.6,size(prime_c,1),1),cos(prime_c(:,3)),sin(prime_c(:,3)),zeros(size(prime_c,1),1),0.5,'LineWidth',1,'DisplayName','Prime13');
+q.LineWidth = 2; q.Marker = 'o'; q.MarkerEdgeColor = 'r'; q.MarkerSize = 5;
+lgd = legend([q], 'Anchor Position');
+lgd.Position = [0.70,0.01,0.25,0.05];
 axis equal
 
 nc_ind = find(x==4);
@@ -138,7 +145,10 @@ xlabel('X (m)'); ylabel('Y (m)');
 title('UWB sensor - points with low coverage')
 c.Label.String = 'number of sensors covering the point';
 hold on
-quiver3(prime_c(:,1),prime_c(:,2),repmat(2.5,size(prime_c,1),1),cos(prime_c(:,3)),sin(prime_c(:,3)),zeros(size(prime_c,1),1),0.5,'LineWidth',1,'DisplayName','Prime13')
+q = quiver3(prime_c(:,1),prime_c(:,2),repmat(2.5,size(prime_c,1),1),cos(prime_c(:,3)),sin(prime_c(:,3)),zeros(size(prime_c,1),1),0.5,'LineWidth',1,'DisplayName','Prime13');
+q.LineWidth = 2; q.Marker = 'o'; q.MarkerEdgeColor = 'r'; q.MarkerSize = 5;
+lgd = legend([q], 'Anchor Position');
+lgd.Position = [0.70,0.01,0.25,0.05];
 axis equal
 
 nc_ind = find(x<4);
@@ -148,7 +158,10 @@ xlabel('X (m)'); ylabel('Y (m)');
 title('UWB sensor - uncovered points')
 c.Label.String = 'number of sensors covering the point';
 hold on
-quiver3(prime_c(:,1),prime_c(:,2),repmat(2.5,size(prime_c,1),1),cos(prime_c(:,3)),sin(prime_c(:,3)),zeros(size(prime_c,1),1),0.5,'LineWidth',1,'DisplayName','Prime13')
+q = quiver3(prime_c(:,1),prime_c(:,2),repmat(2.5,size(prime_c,1),1),cos(prime_c(:,3)),sin(prime_c(:,3)),zeros(size(prime_c,1),1),0.5,'LineWidth',1,'DisplayName','Prime13');
+q.LineWidth = 2; q.Marker = 'o'; q.MarkerEdgeColor = 'r'; q.MarkerSize = 5;
+lgd = legend([q], 'Anchor Position');
+lgd.Position = [0.70,0.01,0.25,0.05];
 axis equal
 
 disp(strcat('Number of sensors used                      = ',num2str(size(prime_c,1))));
