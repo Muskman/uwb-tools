@@ -1,0 +1,9 @@
+\BOOKMARK [1][-]{section.1}{The Sensor model}{}% 1
+\BOOKMARK [1][-]{section.2}{Core assumptions}{}% 2
+\BOOKMARK [1][-]{section.3}{Related work}{}% 3
+\BOOKMARK [1][-]{section.4}{Preliminary Formulation}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{k-coverage problem}{section.4}% 5
+\BOOKMARK [1][-]{section.5}{Methodology}{}% 6
+\BOOKMARK [2][-]{subsection.5.1}{Heuristic method}{section.5}% 7
+\BOOKMARK [2][-]{subsection.5.2}{Solving the k-coverage problem}{section.5}% 8
+\BOOKMARK [1][-]{section.6}{Results for Heuristic method}{}% 9
